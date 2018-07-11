@@ -1,0 +1,26 @@
+{
+  "name": "homestics",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "description": "Homestics",
+  "author": {
+    "name": "Dajogzum"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chart.js": "^2.7.2",
+    "cookie-parser": "^1.4.0",
+    "debug": "^2.2.0",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "mysql": "^2.15.0",
+    "pug": "^2.0.0-beta6",
+    "request": "^2.85.0",
+    "require-reload": "^0.2.2",
+    "serve-favicon": "^2.3.0",
+    "socket.io": "^2.1.0"
+  }
+}

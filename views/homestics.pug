@@ -1,0 +1,27 @@
+﻿extends layout
+
+block scripts_head
+    link(rel='stylesheet', href='/stylesheets/nice-date-picker.css')
+    script(src='/ext/Chart.min.js')
+    script(src='/ext/nice-date-picker.js')
+    script(src='/javascripts/Core.js')
+
+block content
+    .nav
+        input(type='button' value='Teraz' onclick='history(Config.limit, Config.current, Config.today, 1, null)')
+        input(type='button' value='Ostatnie 6h' onclick='history(180, Config.current, Config.today, 1, null)')
+        input(type='button' value='Ostatnie 48h' onclick='history(48, Config.hours, Config.today, 2, null)')
+        input(type='button' value='Ostatnie dni' onclick='history(14, Config.days, Config.date, 0, null)')
+        input(type='button' value='Wybierz Date' id='flip')
+        #zegar
+    #calendar
+        #calendar-wrapper
+        span.calendar-msg
+    div(id='content' style='height:0px; width:0px;')
+        - var positions = ["pos0", "pos1", "pos2", "pos3", "pos4", "pos5"]
+        - for(var x = 0; x < 6; x++)
+            div(id=positions[x] class='container')
+                canvas(id='numero'+x)
+
+block scripts_end
+    script(src='/javascripts/Main_app.js')

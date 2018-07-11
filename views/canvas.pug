@@ -1,0 +1,23 @@
+﻿extends layout
+
+block scripts_head
+    
+block content
+    .container
+        h1="Krzywa Grzewcza"
+        span="Zakres Temperatur"
+        br
+        span="Zimno"
+        input(type="number" name="temp" value="-10")
+        span="Ciepło"
+        input(type="number" name="temp" value="15")
+        br
+        #generuj="Generuj!"
+        br
+        canvas#myCanvas(width="800" height="300" style="border:1px solid #dddddd;")="Blad"
+        #inputtings
+            #add="+"
+            #save="Zapisz"
+
+block scripts_end
+    script(src='/javascripts/Canvas_app.js')

@@ -1,0 +1,49 @@
+﻿extends layout
+
+block scripts_head
+    script(src='/ext/bootstrap-colorpicker.min.js')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-colorpicker.min.css')
+
+block content
+    .container
+        h1="Ustawienia"
+        h2="Ogólne"
+        span="Ampio user: "
+        input(type="text" value="" name="config")
+        br
+        div
+            span="Ampio password: "
+            input(type="password" value="" name="config" id="password")
+            span#showpswd
+        span="Ampio server IP: "
+        input(type="text" value="" name="config")
+        br
+        span="Ampio server port: "
+        input(type="text" value="" name="config")
+        br
+        span="Database name: "
+        input(type="text" value="" name="config")
+        br
+        span="Dni wstecz: "
+        input(type="number" value=0 name="config")
+        br
+        span="Godziny wstecz (w minutach): "
+        input(type="number" value=0 name="config")
+        br
+        span="Minuty wstecz: "
+        input(type="number" value=0 name="config")
+        br
+        span="Limit wczytywania: "
+        input(type="text" value=0 name="config")
+        .wykresy
+            h2="Wykresy"
+            #add="Dodaj"
+            br
+        .live
+            h2="Na żywo"
+            #add="Dodaj"
+            br
+        hr
+        #save="Zapisz"
+block scripts_end
+    script(src='/javascripts/Config_app.js')

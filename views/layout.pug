@@ -1,0 +1,27 @@
+﻿doctype html
+html
+  head
+    title='Homestics'
+    meta(charset="UTF-8")
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    script(src='/ext/jquery.min.js')
+    script(src='/ext/socket.io.js')
+    script(src='/javascripts/layout_controller.js')
+    block scripts_head
+  body
+    .menu
+        h2="Menu"
+        ul
+            li#wykres="Wykresy"
+            li#canvas="Krzywa grzewcza"
+            li#config="Ustawienia"
+        .foot
+        
+        #button
+            img(src='/gfx/menu.png')
+    .pop-up
+        h1="Zapisano!"
+        
+    block content
+    
+    block scripts_end
